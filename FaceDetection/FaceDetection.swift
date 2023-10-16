@@ -81,25 +81,13 @@ class FaceDetection {
             }
         }
     }
-    func convertImagePointToImageViewPoint(_ point: CGPoint, in imageView: UIImageView) -> CGPoint {
-        guard let imageSize = imageView.image?.size else { return .zero }
 
-        // Image frame in the imageView's coordinate system
-        let imageFrame = imageView.contentClippingRect
-
-        let imageViewPoint = CGPoint(
-            x: imageFrame.origin.x + (point.x * imageFrame.size.width / imageSize.width),
-            y: imageFrame.origin.y + (point.y * imageFrame.size.height / imageSize.height)
-        )
-
-        return imageViewPoint
-    }
-
-    func getFaceViewBounds(image: UIImage, face: CIFaceFeature, imageView: UIImageView) -> CGRect? {
+    // MARK: - Private methods
+    private func getFaceViewBounds(image: UIImage, face: CIFaceFeature, imageView: UIImageView) -> CGRect? {
         return getBoundInImageView(image: image, bounds: face.bounds, imageView: imageView)
     }
 
-    func getBoundInImageView(image: UIImage, bounds: CGRect, imageView: UIImageView) -> CGRect? {
+    private func getBoundInImageView(image: UIImage, bounds: CGRect, imageView: UIImageView) -> CGRect? {
         guard let ciImage = CIImage(image: image) else {
             return nil
         }
@@ -116,24 +104,3 @@ class FaceDetection {
         return faceRectangle
     }
 }
-
-
-extension UIImageView {
-    var contentClippingRect: CGRect {
-        guard let image = image else { return bounds }
-        let scale: CGFloat
-        switch contentMode {
-        case .scaleAspectFit:
-            scale = min(bounds.width / image.size.width, bounds.height / image.size.height)
-        case .scaleAspectFill:
-            scale = max(bounds.width / image.size.width, bounds.height / image.size.height)
-        default:
-            return bounds
-        }
-        let size = CGSize(width: image.size.width * scale, height: image.size.height * scale)
-        let x = (bounds.width - size.width) / 2.0
-        let y = (bounds.height - size.height) / 2.0
-        return CGRect(x: x, y: y, width: size.width, height: size.height)
-    }
-}
-
