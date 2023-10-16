@@ -13,6 +13,7 @@
 		2F82BB6A2AD9416300CAB413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F82BB682AD9416300CAB413 /* Main.storyboard */; };
 		2F82BB6C2AD9416500CAB413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F82BB6B2AD9416500CAB413 /* Assets.xcassets */; };
 		2F82BB6F2AD9416500CAB413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F82BB6D2AD9416500CAB413 /* LaunchScreen.storyboard */; };
+		2F82BB772AD9418B00CAB413 /* FaceDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82BB762AD9418B00CAB413 /* FaceDetection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2F82BB6B2AD9416500CAB413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F82BB6E2AD9416500CAB413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F82BB702AD9416500CAB413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F82BB762AD9418B00CAB413 /* FaceDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				2F82BB622AD9416300CAB413 /* AppDelegate.swift */,
 				2F82BB642AD9416300CAB413 /* SceneDelegate.swift */,
 				2F82BB662AD9416300CAB413 /* ViewController.swift */,
+				2F82BB762AD9418B00CAB413 /* FaceDetection.swift */,
 				2F82BB682AD9416300CAB413 /* Main.storyboard */,
 				2F82BB6B2AD9416500CAB413 /* Assets.xcassets */,
 				2F82BB6D2AD9416500CAB413 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F82BB772AD9418B00CAB413 /* FaceDetection.swift in Sources */,
 				2F82BB672AD9416300CAB413 /* ViewController.swift in Sources */,
 				2F82BB632AD9416300CAB413 /* AppDelegate.swift in Sources */,
 				2F82BB652AD9416300CAB413 /* SceneDelegate.swift in Sources */,
@@ -292,7 +296,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JDR9D4JDV9;
+				DEVELOPMENT_TEAM = MURH4SN58F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceDetection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -300,6 +304,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,7 +325,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JDR9D4JDV9;
+				DEVELOPMENT_TEAM = MURH4SN58F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceDetection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -328,6 +333,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
