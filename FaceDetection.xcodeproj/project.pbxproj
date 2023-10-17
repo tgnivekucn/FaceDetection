@@ -14,6 +14,7 @@
 		2F82BB6C2AD9416500CAB413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F82BB6B2AD9416500CAB413 /* Assets.xcassets */; };
 		2F82BB6F2AD9416500CAB413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F82BB6D2AD9416500CAB413 /* LaunchScreen.storyboard */; };
 		2F82BB772AD9418B00CAB413 /* FaceDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82BB762AD9418B00CAB413 /* FaceDetection.swift */; };
+		2FEF0BDB2ADE667A00AD8648 /* DrawFaceDetectResultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF0BDA2ADE667A00AD8648 /* DrawFaceDetectResultHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2F82BB6E2AD9416500CAB413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F82BB702AD9416500CAB413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F82BB762AD9418B00CAB413 /* FaceDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetection.swift; sourceTree = "<group>"; };
+		2FEF0BDA2ADE667A00AD8648 /* DrawFaceDetectResultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawFaceDetectResultHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				2F82BB642AD9416300CAB413 /* SceneDelegate.swift */,
 				2F82BB662AD9416300CAB413 /* ViewController.swift */,
 				2F82BB762AD9418B00CAB413 /* FaceDetection.swift */,
+				2FEF0BDA2ADE667A00AD8648 /* DrawFaceDetectResultHelper.swift */,
 				2F82BB682AD9416300CAB413 /* Main.storyboard */,
 				2F82BB6B2AD9416500CAB413 /* Assets.xcassets */,
 				2F82BB6D2AD9416500CAB413 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FEF0BDB2ADE667A00AD8648 /* DrawFaceDetectResultHelper.swift in Sources */,
 				2F82BB772AD9418B00CAB413 /* FaceDetection.swift in Sources */,
 				2F82BB672AD9416300CAB413 /* ViewController.swift in Sources */,
 				2F82BB632AD9416300CAB413 /* AppDelegate.swift in Sources */,

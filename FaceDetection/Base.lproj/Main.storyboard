@@ -43,7 +43,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person4" width="640" height="360"/>
+        <image name="person4" width="3464" height="4330"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

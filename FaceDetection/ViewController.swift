@@ -14,7 +14,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         mImageView.clipsToBounds = false
-        FaceDetection.shared.detect2(imageView: mImageView)
+        mImageView.image = UIImage(named: "person3")
+
+        FaceDetection.shared.detect2(imageView: self.mImageView) { [weak self] faceBounds, leftEyePoint, rightEyePoint in
+            guard let self = self else { return }
+            DrawFaceDetectResultHelper.shared.drawResult(image: self.mImageView.image!,
+                                                         imageView: self.mImageView,
+                                                         faceBounds: faceBounds,
+                                                         faceLeftEyePoint: leftEyePoint,
+                                                         faceRightEyePoint: rightEyePoint)
+        }
+
     }
 
 
