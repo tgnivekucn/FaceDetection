@@ -23,5 +23,7 @@
 	</dict>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Use Camera</string>
 </dict>
 </plist>

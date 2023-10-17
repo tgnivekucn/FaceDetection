@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var mImageView: UIImageView!
+    @IBOutlet weak var mCameraButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +25,13 @@ class ViewController: UIViewController {
                                                          faceLeftEyePoint: leftEyePoint,
                                                          faceRightEyePoint: rightEyePoint)
         }
-
+        
+        mCameraButton.addTarget(self, action: #selector(captureCameraScene), for: .touchUpInside)
     }
 
-
+    @objc func captureCameraScene() {
+        let vc = CameraViewController()
+        self.present(vc, animated: true)
+    }
 }
 
