@@ -40,33 +40,46 @@ class DrawFaceDetectResultHelper {
             }
         }
     }
-    
+
     // MARK: - Private methods
     private func getBoundInImageView(image: UIImage, bounds: CGRect, imageView: UIImageView) -> CGRect? {
         guard let ciImage = CIImage(image: image) else {
             return nil
         }
-        let imageWidthScale = imageView.bounds.width / ciImage.extent.size.width
-        let imageHeightScale = imageView.bounds.height / ciImage.extent.size.height
-        
-        let x = (bounds.origin.x * imageWidthScale)
-        let y = ((ciImage.extent.size.height - bounds.origin.y - bounds.height) * imageHeightScale)
-        
+        let ciImageSize = ciImage.extent.size
+        let imageWidthScale = imageView.bounds.width / ciImageSize.width
+        let imageHeightScale = imageView.bounds.height / ciImageSize.height
+
+        let scale = min(imageWidthScale, imageHeightScale)
+        let offsetX = (imageView.bounds.width - ciImageSize.width * scale) / 2
+        let offsetY = (imageView.bounds.height - ciImageSize.height * scale) / 2
+
+        let x = (bounds.origin.x * scale) + offsetX
+        let y = ((ciImage.extent.size.height - bounds.origin.y - bounds.height) * scale) + offsetY
+
         let width = bounds.width * imageWidthScale
         let height = bounds.height * imageHeightScale
-        
+
         let faceRectangle = CGRect(x: x, y: y, width: width, height: height)
         return faceRectangle
     }
-    
+
     private func getCGPointInImageView(image: UIImage, point: CGPoint, imageView: UIImageView) -> CGPoint? {
         guard let ciImage = CIImage(image: image) else {
             return nil
         }
-        let imageWidthScale = imageView.bounds.width / ciImage.extent.size.width
-        let imageHeightScale = imageView.bounds.height / ciImage.extent.size.height
-        let x = (point.x * imageWidthScale)
-        let y = ((ciImage.extent.size.height - point.y) * imageHeightScale)
+        let ciImageSize = ciImage.extent.size
+
+        let imageWidthScale = imageView.bounds.width / ciImageSize.width
+        let imageHeightScale = imageView.bounds.height / ciImageSize.height
+        
+        let scale = min(imageWidthScale, imageHeightScale)
+        let offsetX = (imageView.bounds.width - ciImageSize.width * scale) / 2
+        let offsetY = (imageView.bounds.height - ciImageSize.height * scale) / 2
+
+        let x = (point.x * scale) + offsetX
+        let y = ((ciImage.extent.size.height - point.y) * scale) + offsetY
+
         return CGPoint(x: x, y: y)
     }
 }
