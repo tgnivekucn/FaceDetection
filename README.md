@@ -1,5 +1,5 @@
 # FaceDetection
-This is demo app for using Face detection of Apple native api (p.s. CoreImage)
+This is the demo app for using Apple native api to do face detection (i.e. CoreImage)
 # Features
 
 **Core features:**
